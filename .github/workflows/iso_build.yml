@@ -41,6 +41,7 @@ jobs:
         name: image-build-upload
         uses: manjaro/manjaro-iso-action@v2.1
         with:
+          iso-profiles-repo: loeken/iso-profiles
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
