@@ -26,7 +26,7 @@ jobs:
       matrix:
         EDITION: [i3]
         BRANCH: [stable]
-        SCOPE: [minimal]
+        SCOPE: [full]
     steps:
       - 
         uses: styfle/cancel-workflow-action@0.9.0
@@ -45,9 +45,9 @@ jobs:
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
-          version: ${{ steps.time.outputs.time }}-development
+          version: ${{ steps.time.outputs.time }}-loekenjaro
           kernel: linux510
-          code-name: "Nightly-Build"
+          code-name: "loekenjaro"
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       -
         name: rollback
