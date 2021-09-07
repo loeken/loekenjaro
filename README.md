@@ -4,6 +4,10 @@ i3 manjaro community edition with some tools preinstalled
 
 some packages are provided via https://repo.internetz.me
 
+## sneak peak
+![GitHub Logo](/screenshot.png)
+Format: ![Alt Text](url)
+
 ## download isos
 
 the iso's are split up due to size
