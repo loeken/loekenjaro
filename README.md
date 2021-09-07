@@ -24,24 +24,24 @@ this creates: manjaro-i3-21.09-development-210907-linux510.iso
 
 
 ## added packages:
-terminator
-pulseaudio-bluetooth
-thunar
-xfce4-settings
-rofi
-docker
-minikube
-nmap
-iotop
-bwm-ng
-htop
-kubectl
-docker
-docker-compose
-minikube
-polybar
+- terminator
+- pulseaudio-bluetooth
+- thunar
+- xfce4-settings
+- rofi
+- docker
+- minikube
+- nmap
+- iotop
+- bwm-ng
+- htop
+- kubectl
+- docker
+- docker-compose
+- minikube
+- polybar
 
 ## AUR packages
-visual-studio-code-bin
-zsh-theme-powerlevel10k-git
-google-chrome
+- visual-studio-code-bin
+- zsh-theme-powerlevel10k-git
+- google-chrome
