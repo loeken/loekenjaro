@@ -6,7 +6,6 @@ some packages are provided via https://repo.internetz.me
 
 ## sneak peak
 ![GitHub Logo](/screenshot.png)
-Format: ![Alt Text](url)
 
 ## download isos
 
@@ -22,3 +21,27 @@ unzip combined.zip
 ```
 
 this creates: manjaro-i3-21.09-development-210907-linux510.iso
+
+
+## added packages:
+terminator
+pulseaudio-bluetooth
+thunar
+xfce4-settings
+rofi
+docker
+minikube
+nmap
+iotop
+bwm-ng
+htop
+kubectl
+docker
+docker-compose
+minikube
+polybar
+
+## AUR packages
+visual-studio-code-bin
+zsh-theme-powerlevel10k-git
+google-chrome
