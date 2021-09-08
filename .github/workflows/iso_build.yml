@@ -1,11 +1,11 @@
 name: iso_build
 on:
-  workflow_dispatch:
+  #workflow_dispatch:
   #schedule:
   #  - cron:  '30 2 * * *'
   push:
     branches:
-      - master
+      - main
 jobs:
   prepare-release:
     runs-on: ubuntu-20.04
