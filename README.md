@@ -16,11 +16,11 @@ build by github - look inside [github action](https://github.com/loeken/loekenja
 the iso's are split up due to size
 you can download the *.iso* files from https://github.com/loeken/loekenjaro/releases
 ```
-wget https://github.com/loeken/loekenjaro/releases/download/202109071653/manjaro-i3-21.09-development-210907-linux510.iso.zip
-wget https://github.com/loeken/loekenjaro/releases/download/202109071653/manjaro-i3-21.09-development-210907-linux510.iso.z0
+wget https://github.com/loeken/loekenjaro/releases/download/202109080006/manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.z01
+wget https://github.com/loeken/loekenjaro/releases/download/202109080006/manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.zip
 
 # combine
-cat manjaro-i3-21.09-development-210907-linux510.iso.z01 manjaro-i3-21.09-development-210907-linux510.iso.zip > combined.zip
+cat manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.z01 manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.zip > combined.zip
 unzip combined.zip
 ```
 
