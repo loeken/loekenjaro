@@ -41,10 +41,10 @@ jobs:
         name: image-build-upload
         uses: manjaro/manjaro-iso-action@v2.1
         with:
-          iso-profiles-repo: loeken/iso-profiles
-          edition: ${{ matrix.edition }}
-          branch: ${{ matrix.branch }}
-          scope: ${{ matrix.scope }}
+          iso-profiles-repo: https://github.com/loeken/iso-profiles
+          edition: i3
+          branch: stable
+          scope: minimal
           version: ${{ steps.time.outputs.time }}-loekenjaro
           kernel: linux510
           code-name: "loekenjaro"
