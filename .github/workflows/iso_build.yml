@@ -1,5 +1,9 @@
 name: iso_build
 on:
+  workflow_dispatch:
+  # remove if you don't want to build on a schedule
+  schedule:
+    - cron:  '30 6 1 * *'
   push:
     branches:
       - main
