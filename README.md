@@ -20,11 +20,11 @@ wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro
 wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip
 
 # combine
-cat manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.z01 manjaro-i3-21.09-loekenjaro-minimal-210908-linux510.iso.zip > combined.zip
+cat manjaro-i3-22.02-loekenjaro-220223-linux516.iso.z01 https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip > combined.zip
 unzip combined.zip
 ```
 
-this creates: manjaro-i3-21.09-development-210907-linux510.iso
+this creates: manjaro-i3-*.iso
 
 
 ## added packages:
