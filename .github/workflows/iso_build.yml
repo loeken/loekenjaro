@@ -45,7 +45,7 @@ jobs:
           branch: stable
           scope: full
           version: ${{ steps.time.outputs.time }}-loekenjaro
-          kernel: linux517
+          kernel: linux516
           code-name: "loekenjaro"
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       -
