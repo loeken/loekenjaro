@@ -44,8 +44,4 @@ this creates: manjaro-i3-21.09-development-210907-linux510.iso
 - docker-compose
 - minikube
 - polybar
-
-## AUR packages
-- visual-studio-code-bin
-- zsh-theme-powerlevel10k-git
-- google-chrome
+- yay
