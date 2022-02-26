@@ -1,8 +1,6 @@
 ## loekenjaro
 
-i3 manjaro community edition with some tools preinstalled
-
-AUR packages ( bottom of this page ) are provided via https://repo.internetz.me
+customized i3 manjaro community edition
 
 build by github - look inside [github action](https://github.com/loeken/loekenjaro/blob/main/.github/workflows/iso_build.yml) for build instructions
 
