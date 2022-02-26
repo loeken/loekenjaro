@@ -18,7 +18,7 @@ wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro
 wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip
 
 # combine
-cat manjaro-i3-22.02-loekenjaro-220223-linux516.iso.z01 https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip > combined.zip
+cat manjaro-i3-22.02-loekenjaro-220223-linux516.iso.z01 manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip > combined.zip
 unzip combined.zip
 ```
 
