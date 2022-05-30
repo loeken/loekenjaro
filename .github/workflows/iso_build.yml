@@ -46,7 +46,7 @@ jobs:
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
           version: ${{ steps.time.outputs.time }}-loekenjaro
-          kernel: linux516
+          kernel: linux517
           code-name: loekenjaro-${{ matrix.edition }}
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       - name: rollback
