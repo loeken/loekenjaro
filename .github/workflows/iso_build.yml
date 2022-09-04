@@ -27,7 +27,7 @@ jobs:
     needs: [prepare-release]
     strategy:
       matrix:
-        EDITION: [i3]
+        EDITION: [i3,xfce]
         BRANCH: [stable]
         SCOPE: [full]
     steps:
@@ -41,12 +41,12 @@ jobs:
       - name: image-build-upload
         uses: manjaro/manjaro-iso-action@main
         with:
-          iso-profiles-repo: https://github.com/loeken/loekenjaro-iso-profiles
+          iso-profiles-repo: https://github.com/loeken/iso-profiles
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
           version: ${{ steps.time.outputs.time }}-loekenjaro
-          kernel: linux519
+          kernel: linux518
           code-name: loekenjaro-${{ matrix.edition }}
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       - name: rollback
