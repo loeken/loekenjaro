@@ -4,15 +4,17 @@ on:
   # remove if you don't want to build on a schedule
   schedule:
     - cron:  '30 6 1 * *'
+  # remove if you don't want to build when commits are pushed to you main/master branch
   push:
     branches:
+      - master
       - main
-    paths-ignore:
-      - '**/README.md'
+
 jobs:
   prepare-release:
     runs-on: ubuntu-20.04
     steps:
+      # cancel already running instances of the same action on the currently working on branch
       - uses: styfle/cancel-workflow-action@0.9.0
         with:
           access_token: ${{ github.token }}
@@ -21,36 +23,40 @@ jobs:
         with:
           format: 'YYYYMMDDHHmm'
     outputs:
-      release_tag: ${{ steps.time.outputs.time }}
-  build-release:
+      # generate a common tag to be used in all elements of the matrix strategy
+      release_tag: ${{ steps.time.outputs.time }}      
+  release:
     runs-on: ubuntu-20.04
-    needs: [prepare-release]
+    needs: prepare-release    
     strategy:
       matrix:
-        EDITION: [i3,xfce]
+        ##### EDIT ME #####      
+        EDITION: [i3]
         BRANCH: [stable]
-        SCOPE: [minimal,full]
+        SCOPE: [minimal]
+        ###################
     steps:
+      # cancel already running instances of the same action on the currently working on branch
       - uses: styfle/cancel-workflow-action@0.9.0
         with:
           access_token: ${{ github.token }}
-      - id: time
-        uses: nanzm/get-time-action@v1.1
-        with:
-          format: 'YY.MM'   
-      - name: image-build-upload
+      - id: image-build
         uses: manjaro/manjaro-iso-action@main
         with:
-          iso-profiles-repo: https://github.com/loeken/iso-profiles
+          iso-profiles-repo: https://github.com/loeken/loekenjaro-iso-profiles
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
-          version: ${{ steps.time.outputs.time }}-loekenjaro
-          kernel: linux519
-          code-name: loekenjaro-${{ matrix.edition }}
+          version: "21.0"
+          kernel: linux518
+          code-name: "Ornara"
+          # providing a release-tag allows for github releases
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
-      - name: rollback
+      # delete the github release in case of cancellation or failure
+      # refer to .github/workflows/cleanup-test-release.yml for rollback strategies concerning the other distribution channels
+      - name: rollback github release
         if: ${{ failure() || cancelled() }}
         run: |
           echo ${{ github.token }} | gh auth login --with-token
           gh release delete ${{ needs.prepare-release.outputs.release_tag }} -y --repo ${{ github.repository }}
+          git push --delete origin ${{ needs.prepare-release.outputs.release_tag }}
