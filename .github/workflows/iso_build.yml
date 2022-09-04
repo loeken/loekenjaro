@@ -27,7 +27,7 @@ jobs:
     needs: [prepare-release]
     strategy:
       matrix:
-        EDITION: [i3,xfce]
+        EDITION: [i3]
         BRANCH: [stable]
         SCOPE: [full]
     steps:
