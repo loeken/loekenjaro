@@ -31,9 +31,9 @@ jobs:
     strategy:
       matrix:
         ##### EDIT ME #####      
-        EDITION: [i3]
+        EDITION: [i3,xfce]
         BRANCH: [stable]
-        SCOPE: [minimal]
+        SCOPE: [minimal,full]
         ###################
     steps:
       # cancel already running instances of the same action on the currently working on branch
