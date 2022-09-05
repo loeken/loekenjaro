@@ -47,9 +47,9 @@ jobs:
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
-          version: "21.0"
-          kernel: linux518
-          code-name: "Ornara"
+          version: "21.3.0"
+          kernel: linux519
+          code-name: "loekenjaro"
           # providing a release-tag allows for github releases
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       # delete the github release in case of cancellation or failure
