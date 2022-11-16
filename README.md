@@ -11,12 +11,11 @@ build by github - look inside [github action](https://github.com/loeken/loekenja
 
 ## download isos
 
-the iso's are split up due to size
+the iso's are split up into 2GB files due to size limits of github
 you can download the *.iso* files from https://github.com/loeken/loekenjaro/releases
 ```
 wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.z01
 wget https://github.com/loeken/loekenjaro/releases/download/202202232126/manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip
-
 # combine
 cat manjaro-i3-22.02-loekenjaro-220223-linux516.iso.z01 manjaro-i3-22.02-loekenjaro-220223-linux516.iso.zip > combined.zip
 unzip combined.zip
