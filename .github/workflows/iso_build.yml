@@ -33,7 +33,7 @@ jobs:
         ##### EDIT ME #####      
         EDITION: [i3,xfce]
         BRANCH: [stable]
-        SCOPE: [full]
+        SCOPE: [minimal,full]
         ###################
     steps:
       # cancel already running instances of the same action on the currently working on branch
@@ -47,8 +47,8 @@ jobs:
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
-          version: "21.3.0"
-          kernel: linux519
+          version: "22.0.0"
+          kernel: linux61
           code-name: "loekenjaro"
           # providing a release-tag allows for github releases
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
