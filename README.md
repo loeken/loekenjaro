@@ -24,7 +24,6 @@ unzip combined.zip
 this creates: manjaro-i3-*.iso
 
 
-
 ## added packages:
 - terminator
 - pulseaudio-bluetooth
