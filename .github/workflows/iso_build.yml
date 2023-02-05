@@ -33,7 +33,7 @@ jobs:
         ##### EDIT ME #####      
         EDITION: [i3,xfce]
         BRANCH: [stable]
-        SCOPE: [full,minimal]
+        SCOPE: [minimal]
         ###################
     steps:
       # cancel already running instances of the same action on the currently working on branch
