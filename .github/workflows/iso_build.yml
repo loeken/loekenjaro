@@ -47,7 +47,6 @@ jobs:
           version: "22.0.0"
           kernel: linux61
           code-name: "loekenjaro"
-          # providing a release-tag allows for github releases
           release-tag: ${{ needs.prepare-release.outputs.release_tag }}
       # delete the github release in case of cancellation or failure
       # refer to .github/workflows/cleanup-test-release.yml for rollback strategies concerning the other distribution channels
