@@ -7,7 +7,6 @@ on:
     branches:
       - master
       - main
-
 jobs:
   prepare-release:
     runs-on: ubuntu-22.04
