@@ -40,7 +40,7 @@ jobs:
       - id: image-build
         uses: manjaro/manjaro-iso-action@main
         with:
-          iso-profiles-repo: https://github.com/loeken/loekenjaro-iso-profiles-gitlab
+          iso-profiles-repo: https://github.com/loeken/loekenjaro-iso-profiles
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
           scope: ${{ matrix.scope }}
